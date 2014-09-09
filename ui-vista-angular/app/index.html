@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang = "en" ng-app="Planifications">
+
+<head>
+	<meta charset="utf-8">
+	<title>Planifications</title>
+	<link rel="stylesheet" href="css/app.css"/>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+</head>
+
+<body ng-controller="PlanificationsController">
+
+	<!-- Inputs de fechas para realizar el filtrado -->
+	<span>Ingrese la fecha desde y hasta ("dd/mm/yyyy"), para filtrar</span>
+	<div class="filtro">
+		<span>Desde:</span><input type="text" ng-model="filterDateDesde"/> 
+		<span>Hasta:</span><input type="text" ng-model="filterDateHasta"/>
+	</div>
+
+	<!-- Tabla con las planificaciones filtradas por el rango de fechas -->	
+	<table class="tablaPlanification">
+		<caption>Table of Planifications</caption>
+		<tbody>
+			<tr class="thead">
+				<th>Date</th>
+				<th>State</th>
+			</tr>
+					
+			<tr ng-repeat="planification in Planifications | dateFilter:filterDateDesde:filterDateHasta">
+				<td><a href="#" ng-click="getHours(planification)">{{planification.date}}</a></td>
+				<td><p>{{planification.state}}</p></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Tabla con los horarios de la planificacion seleccionada -->
+	<table data-ng-if="visible" class="tableHours">
+		<caption>Hours to planifications</caption>
+		<tr class="thead">
+			<th>Employee</th>
+                        <th>In</th>
+                        <th>Out</th>
+                </tr>
+
+		<tr ng-repeat="assignment in hours">
+			<td>{{assignment.employee}}</td>
+			<td >{{assignment.in}}</td>
+			<td >{{assignment.out}}</td>	
+		</tr>
+	</table>
+</body>
+
+<!-- Scripts javaScript -->
+<script src="lib/angular.js"> </script>
+<script src="js/app.js"> </script>
+</html>tml></html>
