@@ -1,0 +1,5 @@
+package AppModelsTest
+
+class SeePlanificationsTest {
+	
+}
