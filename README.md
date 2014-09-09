@@ -6,6 +6,7 @@ El Grupo esta conformado por:
 + Damián Cravacuore
 + Leandro Moscheni
 + Julian Skalic
+
 Los trabajos prácticos constan de modelar con objetos un
 Sistema para la planificación de horarios, y las vistas
 del mismo en diferentes tecnologías, entre ellas:
