@@ -1,0 +1,35 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <h1>Crear Disponibilidad</h1>
+    
+    <form wicket:id="availabilityForm" class="form">
+    	<fieldset>
+    	<div class="form-group">
+        	<label class="control-label" for="availability.from">Desde</label>
+        	<div class="controls">
+        		<input wicket:id="availability.from" type="text" placeholder="Ejemplo: 10" class="form-control" />
+        	</div>
+    	</div>
+    	
+    	<div class="form-group">
+        	<label class="control-label" for="availability.to">Hasta</label>
+        	<div class="controls">
+        		<input wicket:id="availability.to" type="text" placeholder="Ejemplo: 18" class="form-control" />
+        	</div>
+    	</div>
+    	
+    	<div class="form-group">
+        	<label class="control-label" for="nombre">Dia</label>
+        	<div class="controls">
+	        	<select wicket:id="availability.dayOfWeek" />
+        	</div>
+    	</div>
+    	
+        <div wicket:id="feedbackPanel" class="alert alert-error" />  
+
+        <div class="form-actions">
+            <button wicket:id="aceptar" type="submit" class="btn btn-primary">Aceptar</button>
+            <button wicket:id="cancelar" type="submit" class="btn btn-default">Cancelar</button>
+        </div>
+        </fieldset>
+    </form>
+</wicket:extend>

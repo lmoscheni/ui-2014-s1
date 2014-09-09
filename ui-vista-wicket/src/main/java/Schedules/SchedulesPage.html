@@ -1,0 +1,26 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+	<form wicket:id="schedulesForm" class="container">
+		<h1>Horarios</h1>
+		<br />
+		
+        <table class="table table-striped table-bordered table-condensed">
+        	<thead>
+	       		<tr>
+	           		<th id="main">Empleado</th>
+	           		<th id="main">Entrada</th>
+	           		<th id="main">Salida</th>
+	            </tr>
+	        </thead>
+			<tbody>
+	          	<tr wicket:id="assignments">
+	          		<td><span wicket:id="employee.toString">Empleado</span></td> 
+	   	            <td><span wicket:id="start">Entrada</span></td> 
+	                <td><span wicket:id="end">Salida</span></td> 
+	           	</tr>
+           	</tbody>
+       	</table>
+       	<div class="form-actions">
+	    	<button wicket:id="Volver" class="btn btn-default">Volver</button>
+	    </div>
+ 	</form>
+</wicket:extend>

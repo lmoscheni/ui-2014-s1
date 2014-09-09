@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="utf-8">
+	<title>Planificador de horarios</title>
+	<link rel="icon" type="image/png" href="images/planification.png" />
+	
+	<!-- JQUERY -->
+    <script src="js/jquery.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<script src="js/bootstrap.js"></script>
+		
+	<!-- Custom -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<br />
+	<div class="container page-header">
+		<div style="float: left">
+			<a id="linkToHomePage" wicket:id="linkToHomePage">
+				<img src="images/planification.png" class="img-polaroid"
+					 width="120" height="120">
+			</a>
+		</div>
+
+		<div style="float: left">
+			<h1>Planificador de horarios</h1>
+		</div>
+	</div>
+
+	<div class="container">
+		<br />
+		<ul class="nav nav-tabs">
+		<!-- Navigation -->
+		<li><a wicket:id="Planifications">Planifications</a></li>
+	    <li><a wicket:id="Restrictions">Restrictions</a></li>
+	    <li><a wicket:id="Employees">Employees</a></li>
+	    </ul>
+    </div>
+		
+	<div class="container">
+		<!-- Content -->
+		<div class="content">
+			<wicket:child />
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<br />
+	
+</body>
+</html>

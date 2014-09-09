@@ -1,0 +1,35 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+	<form wicket:id="restrictions" class="container">
+		<h1>Agregar restriccion</h1>
+		<br />
+		
+		<table class="table table-striped table-bordered table-condensed">
+        	<thead>
+	       		<tr>
+	           		<th id="main">Empleado</th>
+	            	<th id="main">Acciones</th>
+	            </tr>
+	        </thead>
+			<tbody>
+	          	<tr wicket:id="scheduler.employees">
+	          		<td><span wicket:id="toString"/></td> 
+	                <td>
+	                	<div class="btn-group">
+	                		<button wicket:id="Agregar" class="btn-link">Agregar</button>
+	                	</div>
+	   	            </td> 
+	           	</tr>
+           	</tbody>
+       	</table>
+       	<div class="form-group">
+		  	<label class="control-label">Dia</label>
+		   	<div class="controls">
+		   		<input wicket:id="date" type="text" placeholder="Formato: yyyy/mm/dd" class="form-control" />
+		   	</div>
+	    </div>
+       	<div wicket:id="feedbackPanel" class="alert alert-error" />
+       	<div class="form-actions">
+       	    <button wicket:id="Volver" type="submit" class="btn btn-default">Volver</button>
+	    </div>
+	</form>
+</wicket:extend>

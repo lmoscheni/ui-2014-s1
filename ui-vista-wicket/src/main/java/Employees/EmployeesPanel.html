@@ -1,0 +1,35 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+	<form wicket:id="employeesForm" class="container">
+        <h1>Empleados</h1>
+		<br />
+		
+        <table class="table table-striped table-bordered table-condensed">
+        	<thead>
+	       		<tr>
+	           		<th id="main">Nombre</th>
+	           		<th id="main">Apellido</th>
+	            	<th id="main">N&uacute;mero de legajo</th>
+	            	<th id="main">Disponibilidad</th>
+	            	<th id="main">Acciones</th>
+	            </tr>
+	        </thead>
+			<tbody>
+	          	<tr wicket:id="employees">
+	          		<td><span wicket:id="name"/></td> 
+	   	            <td><span wicket:id="surname"/></td> 
+	                <td><span wicket:id="file"/></td> 
+	   	            <td><span wicket:id="availabilityDays"/></td> 
+	                <td>
+	                	<div class="btn-group">
+	                		<button wicket:id="Editar" class="btn-link">Editar</button>
+	                	</div>
+	   	            </td> 
+	           	</tr>
+           	</tbody>
+       	</table>
+       	<div class="form-actions">
+	    	<button wicket:id="Crear" class="btn btn-success">Crear</button>
+       	    <button wicket:id="Volver" type="submit" class="btn btn-default">Volver</button>
+	    </div>
+ 	</form>
+</wicket:extend>
